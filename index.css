@@ -1,3 +1,116 @@
-#greeting {
-  color: blanchedalmond;
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* HeaderComponent */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.logo {
+  width: 100px;
+  aspect-ratio: 3/2;
+  margin-left: 10px;
+}
+
+.nav-items > ul {
+  display: flex;
+  list-style: none;
+  font-size: 25px;
+}
+
+.nav-items > ul > li {
+  padding: 10px;
+  margin: 10px;
+}
+
+.login-btn {
+  padding: 0 20px;
+  margin-right: 5px;
+  font-size: 20px;
+  font-weight: 700;
+  background: transparent;
+  cursor: pointer;
+  color: #4a4a4a;
+}
+
+.login-btn:hover {
+  color: white;
+  background: black;
+}
+
+/* BodyComponent */
+.filter {
+  display: flex;
+  justify-content: center;
+  margin: 15px 15px;
+}
+
+.search-box {
+  width: 250px;
+  outline: 1px solid #919090;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.filter-btn {
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 8px;
+}
+
+.search-btn {
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 11px 20px;
+  border-radius: 8px;
+}
+
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* RestaurantComponent */
+.res-card {
+  width: 200px;
+  padding: 5px;
+  margin: 10px 4px;
+  border-radius: 15px;
+  border: 1px solid #e6e5e5;
+  cursor: pointer;
+  line-height: 1.6;
+}
+
+.res-card:hover {
+  box-shadow: 10px 5px 5px rgb(189, 188, 188);
+}
+
+.res-logo {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.cuisine {
+  color: #5b5b5b;
+}
+
+/* Shimmer Component */
+
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shimmer-card {
+  width: 200px;
+  height: 350px;
+  margin: 20px;
+  background: #dedddd;
+  border-radius: 8px;
 }

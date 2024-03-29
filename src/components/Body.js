@@ -1,6 +1,8 @@
 import RestaurantComp from "./RestaurantComp";
 import { useState, useEffect } from "react";
 import ShimmerUi from "./ShimmerUi";
+import { Link } from "react-router-dom";
+import { RESTAURANT_LIST } from "../utils/constants";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -12,9 +14,7 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.37240&lng=78.43780&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
+    const data = await fetch(RESTAURANT_LIST);
 
     const json = await data.json();
 
@@ -68,9 +68,13 @@ const Body = () => {
       </div>
       <div className="res-container">
         {filteredRestaurant.map((restaurant) => (
-          <RestaurantComp key={restaurant.info.id} resData={restaurant} />
-          //Important line Note: Do not use index as key for a list of items.(Not recommended to use the index as key)
-          //Use Unique Id's
+          <Link
+            className="link-tag"
+            key={restaurant.info.id}
+            to={"/restaurant/" + restaurant.info.id}
+          >
+            <RestaurantComp resData={restaurant} />
+          </Link>
         ))}
       </div>
     </div>

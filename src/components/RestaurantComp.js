@@ -12,8 +12,8 @@ const RestaurantComp = (props) => {
         className="res-logo"
         src={CDN_IMG_URL + cloudinaryImageId}
       />
-      <h3>{name}</h3>
-      <h4>
+      <h3 className="hotels-list">{name}</h3>
+      <h4 className="hotels-list">
         {avgRating} <b> .</b> {sla?.slaString} mins
       </h4>
       <h4 className="cuisine">{cuisines.join(", ")}</h4>
